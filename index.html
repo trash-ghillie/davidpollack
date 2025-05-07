@@ -1,1 +1,142 @@
-sample text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David's Cybersecurity Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      padding: 32px 16px 16px 16px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 2px solid #ddd;
+    }
+    .bio {
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 8px;
+      color: #555;
+    }
+    .main-content {
+      flex: 1;
+      padding: 40px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+    }
+    .headline {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subheadline {
+      font-size: 1.3rem;
+      color: #0074d9;
+      margin-bottom: 32px;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #eee;
+      margin-bottom: 24px;
+    }
+    .tab-button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #555;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .tab-button.active {
+      color: #0074d9;
+      border-bottom: 3px solid #0074d9;
+      font-weight: bold;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 24px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px;
+      }
+      .main-content {
+        padding: 24px 8px;
+      }
+      .bio {
+        margin-left: 16px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
+      <div class="bio">
+        <strong>David</strong><br>
+        Cybersecurity enthusiast with a passion for risk management and purposeful innovation. <br>
+        <span style="font-size:0.95em; color:#888;">(Short bio goes here.)</span>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="headline">Inspired by risk. Driven by purpose.</div>
+      <div class="subheadline">David's Cybersecurity Portfolio</div>
+      <nav class="tabs">
+        <button class="tab-button active" onclick="showTab(0)">Project 1</button>
+        <button class="tab-button" onclick="showTab(1)">Project 2</button>
+      </nav>
+      <section class="tab-content active">
+        <h2>Project 1: [Project Title]</h2>
+        <p>This is where you can write a full blog article about your first project. Describe your goals, process, results, and what you learned.</p>
+      </section>
+      <section class="tab-content">
+        <h2>Project 2: [Project Title]</h2>
+        <p>This is where you can write a full blog article about your second project. Share your experience, challenges, and outcomes.</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    function showTab(index) {
+      var buttons = document.querySelectorAll('.tab-button');
+      var contents = document.querySelectorAll('.tab-content');
+      buttons.forEach((btn, i) => btn.classList.toggle('active', i === index));
+      contents.forEach((tab, i) => tab.classList.toggle('active', i === index));
+    }
+  </script>
+</body>
+</html>
