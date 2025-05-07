@@ -65,7 +65,7 @@
       border: none;
       outline: none;
       color: #00FF41;
-      padding: 8px 18px;
+      padding: 8px 12px;
       font-size: 1rem;
       cursor: pointer;
       border-bottom: 3px solid transparent;
@@ -106,7 +106,7 @@
 <body>
   <div class="container">
     <aside class="sidebar">
-      <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
+      <img src="Selfie.jpg" alt="Profile Picture" class="profile-pic">
       <div class="bio">
         <strong>David Pollack</strong><br>
         Cybersecurity enthusiast with a passion for the bleeding edge. <br>
@@ -117,12 +117,15 @@
       <div class="headline">Driven by intrusion. Inspired by flawless security.</div>
       <div class="subheadline">David's Cybersecurity Portfolio</div>
       <nav class="tabs">
-        <button class="tab-button active" onclick="showTab(0)">Project 1</button>
+        <button class="tab-button active" onclick="showTab(0)">HIDS</button>
         <button class="tab-button" onclick="showTab(1)">Project 2</button>
       </nav>
       <section class="tab-content active">
-        <h2>Project 1: [Project Title]</h2>
-        <p>This is where ill have project number 1.</p>
+        <h2>Project 1: [My First Python Program]</h2>
+        <p>Hello HIDS!?. I decided to start with this because as a kid I did some programming so I tackled what I felt I could do first. </p>
+        <p> I figured a basic GUI with some log data might be useful to understand on the back end and not too complicated to program.</p>
+        <p> Here is the first milestone in the project, where I took a snipit of the GUI loading up. </p>
+        <p> insert pic later, time to sleep lol</p>
       </section>
       <section class="tab-content">
         <h2>Project 2: [Project Title]</h2>
@@ -138,6 +141,5 @@
       contents.forEach((tab, i) => tab.classList.toggle('active', i === index));
     }
   </script>
-  <img class="profile-pic" src="Selfie.jpg" alt="Profile Picture">
 </body>
 </html>
